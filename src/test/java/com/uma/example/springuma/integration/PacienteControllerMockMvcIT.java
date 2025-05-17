@@ -12,8 +12,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.uma.example.springuma.integration.base.AbstractIntegration;
 
 import com.uma.example.springuma.model.Medico;
+import com.uma.example.springuma.model.Paciente;
 
-public class MedicoControllerMockMvcIT extends AbstractIntegration{
+public class PacienteControllerMockMvcIT extends AbstractIntegration{
     
     @Autowired
 	private MockMvc mockMvc;
@@ -23,13 +24,16 @@ public class MedicoControllerMockMvcIT extends AbstractIntegration{
 
     private Medico medico;
 
+    private Paciente paciente;
+
     @BeforeEach
     void setUp() {
         // Crear un médico
         medico = new Medico();
         medico.setId(1);
         medico.setNombre("Dr. Juan");
-        medico.setDni("12345678A");
+        medico.setDni("12345678A"); 
+        
     }
 
     private void guardarMedico(Medico medico) throws Exception {

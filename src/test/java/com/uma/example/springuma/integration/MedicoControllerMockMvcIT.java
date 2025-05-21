@@ -1,3 +1,5 @@
+/*Marcos Luque Montiel y Soraya Bennai Sadqi */
+
 package com.uma.example.springuma.integration;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -32,6 +34,7 @@ public class MedicoControllerMockMvcIT extends AbstractIntegration{
         medico.setDni("12345678A");
     }
 
+//Método privado para guardar un médico    
     private void guardarMedico(Medico medico) throws Exception {
         // Guardar el médico
         this.mockMvc.perform(post("/medico")
